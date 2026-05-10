@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Trip Summary</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Trip Summary</h1>
+
+    <p><strong>Name:</strong> {{ name }}</p>
+    <p><strong>Email:</strong> {{ email }}</p>
+    <p><strong>Phone:</strong> {{ phone }}</p>
+
+    <h3>Details</h3>
+    <p>Travelers: {{ travel_per }}</p>
+    <p>Vehicle: {{ vehicle_name }}</p>
+    <p>Distance: {{ km }} km</p>
+    <p>Stay: {{ stay_type }} ({{ days }} days)</p>
+    <p>Food: {{ food_type }}</p>
+
+    <h3>Cost Breakdown</h3>
+    <p>Travel Cost: ₹{{ travel_cost }}</p>
+    <p>Stay Cost: ₹{{ stay_total }}</p>
+    <p>Food Cost: ₹{{ food_total }}</p>
+    <p>Extra Activities: ₹{{ extra }}</p>
+
+    <h2>Total Per Person: ₹{{ total_per_person }}</h2>
+    <h2>Grand Total: ₹{{ total_all }}</h2>
+
+    <a href="/">Create Another Trip</a>
+</body>
+</html>

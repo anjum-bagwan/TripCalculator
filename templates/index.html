@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Trip Maker</title>
+</head>
+<body>
+    <h1>Trip Maker</h1>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <form action="/calculate" method="POST">
+
+        <input type="number" name="travel_per" placeholder="Number of travelers" required><br><br>
+        <input type="text" name="name" placeholder="Name / Group Name" required><br><br>
+        <input type="email" name="email" placeholder="Email" required><br><br>
+        <input type="text" name="phone" placeholder="Phone Number" required><br><br>
+
+        <h3>Travel</h3>
+        Distance (km): <input type="number" step="0.1" name="km" required><br><br>
+
+        Vehicle:
+        <select name="vehicle">
+            <option value="1">Bike</option>
+            <option value="2">Bus</option>
+            <option value="3">Car</option>
+            <option value="4">Aeroplane</option>
+        </select><br><br>
+
+        <h3>Stay</h3>
+        Days: <input type="number" name="days" required><br><br>
+
+        <select name="stay">
+            <option value="1">No Stay</option>
+            <option value="2">Basic Hotel</option>
+            <option value="3">Standard Hotel</option>
+            <option value="4">Luxury Hotel</option>
+        </select><br><br>
+
+        <h3>Food</h3>
+        <select name="food">
+            <option value="1">No Food</option>
+            <option value="2">Basic Veg</option>
+            <option value="3">Standard Veg / Non-Veg</option>
+            <option value="4">Premium</option>
+        </select><br><br>
+
+        Extra:
+        <input type="number" name="extra" value="0"><br><br>
+
+        <button type="submit">Calculate Trip</button>
+    </form>
+
+</body>
+</html>
