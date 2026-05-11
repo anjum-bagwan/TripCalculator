@@ -6,7 +6,7 @@ TripCalculator is a Flask-based travel  cost Calculator web application.
 - Hotel cost system
 - food cost system
 - Extra activites cost
-- result summsry page
+- result summary page
 
 ## tech stack
 -python
